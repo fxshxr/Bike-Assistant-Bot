@@ -5,4 +5,3 @@ template_sticker_idandr = 'CAADAgADjgAD9zVWDj0DjB4vCa0YAg'
 template_sticker_idkota = 'CAADAgADigAD9zVWDjiAGqQON0toAg'
 template_sticker_idfish = 'CAADAgADjgMAAhpchATmYPilXm6zWgI'
 template_sticker_idvas ='CAADAgADnwAD9zVWDsHn9V_itDyBAg'
-
