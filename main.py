@@ -4,12 +4,18 @@ import constantsss
 import dialogs
 import os
 import random
-bot = telebot.TeleBot(constantsss.token)
+from flood_meter import FloodMeter
 
-print(bot.get_me())
+
+bot = telebot.TeleBot(constantsss.token)
+flood_meter = FloodMeter()
+
 
 @bot.message_handler(content_types=["text"])
 def reply(message):
+
+    flood_meter.check_message()
+
     commands = {
         u", а?" : (bot.send_message, "хуй на"),
         u",а?" : (bot.send_message, "хуй на"),
@@ -38,8 +44,9 @@ def reply(message):
         u"mamu" : (bot.reply_to, message, u"ЕБАЛ")
     }
 
-    for i in commands:
-        if i in message.text.lower():
-            commands[i][0](commands[i][1], commands[i][2])
+    if flood_meter.flood_rate <= constantsss.flood_limit:
+        for i in commands:
+            if i in message.text.lower():
+                commands[i][0](commands[i][1], commands[i][2])
 
 bot.polling(none_stop=True)
