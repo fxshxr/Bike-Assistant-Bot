@@ -1,4 +1,4 @@
-token = '430436767:AAFjuew233QkRK9wXVThJyK62zuEi2YPVbM'
+token = '835427382:AAFREUUVUTq8bmaml7UNESs6H4ULcTI0TTE'
 
 flood_limit = 60
 
